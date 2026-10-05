@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -28,18 +28,22 @@
     <div class="attendance-tracker">
       <div class="attendance-header">
         <i class="fas fa-users"></i>
-        Attendance: <span id="attendeeCount">0</span>/50
+        Attendance: <span id="attendeeCount">0</span>/<span id="attendanceGoal">50</span>
       </div>
-      <div class="progress-container">
-        <div id="progressBar" class="progress-bar"></div>
+      <div class="progress-row">
+        <div class="progress-container">
+          <div id="progressBar" class="progress-bar"></div>
+        </div>
+        <span id="progressPercentage">0%</span>
       </div>
+      <p id="celebrationMessage" class="celebration-message" aria-live="polite" hidden></p>
     </div>
     <div class="container">
       <!-- Feedback message -->
-      <p id="greeting"></p>
+      <p id="greeting" aria-live="polite"></p>
 
       <!-- Check-in form -->
-      <form class="check-in" id="checkInForm">
+      <form class="check-in" id="checkInForm" novalidate>
         <label for="attendeeName" class="form-label">Attendee Check-In</label>
         <div class="form-group">
           <div class="input-wrapper">
@@ -79,6 +83,21 @@
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
           </div>
+        </div>
+      </div>
+
+      <div class="attendee-list">
+        <h3>Checked-In Attendees</h3>
+        <div class="attendee-table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Team</th>
+              </tr>
+            </thead>
+            <tbody id="attendeeList"></tbody>
+          </table>
         </div>
       </div>
     </div>
