@@ -22,7 +22,8 @@
 body {
   font-family: "DM Sans", sans-serif;
   background-color: #f0f5f3;
-  background-image: linear-gradient(rgba(20, 71, 65, 0.025) 1px, transparent 1px),
+  background-image:
+    linear-gradient(rgba(20, 71, 65, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(20, 71, 65, 0.025) 1px, transparent 1px);
   background-size: 28px 28px;
   color: var(--ink);
@@ -46,7 +47,8 @@ body {
   display: flex;
   align-items: center;
   min-height: 300px;
-  background: linear-gradient(
+  background:
+    linear-gradient(
       105deg,
       rgba(9, 38, 45, 0.94) 0%,
       rgba(0, 79, 88, 0.84) 52%,
@@ -142,7 +144,9 @@ select {
   font-weight: 500;
   background: var(--surface);
   color: var(--ink);
-  transition: border-color 160ms ease, box-shadow 160ms ease;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
 }
 
 input::placeholder {
@@ -172,7 +176,10 @@ button {
   font-weight: 700;
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(8, 125, 112, 0.18);
-  transition: background-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+  transition:
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
 }
 
 button:hover {
@@ -394,7 +401,10 @@ select {
   flex-direction: column;
   justify-content: space-between;
   gap: 7px;
-  transition: transform 170ms ease, box-shadow 170ms ease, border-color 170ms ease;
+  transition:
+    transform 170ms ease,
+    box-shadow 170ms ease,
+    border-color 170ms ease;
 }
 
 .team-card:hover {

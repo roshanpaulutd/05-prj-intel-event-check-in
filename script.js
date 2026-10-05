@@ -60,7 +60,10 @@ function updateAttendanceDisplay() {
     teamCountDisplays[team].textContent = teamCounts[team];
   }
 
-  const progressPercentage = Math.min((totalAttendance / attendanceGoal) * 100, 100);
+  const progressPercentage = Math.min(
+    (totalAttendance / attendanceGoal) * 100,
+    100,
+  );
   progressBar.style.width = `${progressPercentage}%`;
   progressPercentageDisplay.textContent = `${progressPercentage}%`;
 }
@@ -200,7 +203,10 @@ checkInForm.addEventListener("submit", function (event) {
   const teamIsInvalid = !isValidTeam(team);
 
   if (name === "" && teamIsInvalid) {
-    showFormMessage("Please enter your name and select a team to check in.", "error-message");
+    showFormMessage(
+      "Please enter your name and select a team to check in.",
+      "error-message",
+    );
     attendeeName.focus();
     return;
   }
@@ -219,7 +225,7 @@ checkInForm.addEventListener("submit", function (event) {
 
   showFormMessage(
     `Welcome to the Intel Summit, ${name}! You are checked in with ${teamNames[team]}.`,
-    "success-message"
+    "success-message",
   );
   teamCounts[team] = teamCounts[team] + 1;
   totalAttendance = totalAttendance + 1;
